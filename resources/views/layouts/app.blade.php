@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Login</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,7 +24,6 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,7 +34,50 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
 
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Home</p>
+                                </a>
+                              </li>
+                        
+                        <li class="nav-item">
+                            <a href="/aboutus" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>About Us</p>
+                            </a>
+                          </li>
+                          
+                        
+
+                          <li class="nav-item">
+                            <a href="/track" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Track</p>
+                            </a>
+                          </li>
+
+                          
+                        
+                        <li class="nav-item">
+                          <a href="/feedback" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Feedback</p>
+                          </a>
+                        </li>
+
+                         
+                          </li>
+                          <li class="nav-item">
+                            <a href="/contact" class="nav-link">
+                              <i class="far fa-circle nav-9-98971_contact-us-icon-in-black-ndash-free-icons.png"></i>
+                             
+                              <p>Contact</p>
+                            </a>
+                          </li>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
