@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -45,9 +45,9 @@
                               </li>
                         
                         <li class="nav-item">
-                            <a href="/aboutus" class="nav-link">
+                            <a href="/location" class="nav-link">
                               <i class="far fa-circle nav-icon"></i>
-                              <p>About Us</p>
+                              <p>Find Us</p>
                             </a>
                           </li>
                           
@@ -60,14 +60,7 @@
                             </a>
                           </li>
 
-                          
                         
-                        <li class="nav-item">
-                          <a href="/feedback" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Feedback</p>
-                          </a>
-                        </li>
 
                          
                           </li>

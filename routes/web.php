@@ -16,7 +16,13 @@ Route::get('/new', function () {
 });
 
 Route::get('/',function(){
-    return view('welcome');
+    return view('index');
+});
+
+Route::group(['middleware'=>['auth','Administrator']], function(){
+    Route::get('/dashboard',function(){
+    return view('backend/layouts/dashboard');
+    });
 });
 
 Route::get('/index',function(){
@@ -33,27 +39,68 @@ Route::get('/track',function(){
 
 
 Route::get('/addpm',function(){
+    if(!Gate::allows("isAdmin")){
+        abort(404,"Sorry, You cannot do this action");
+    }
+
     return view('users/postmaster/addpm');
 });
 
 Route::get('/deletepm',function(){
+   
+    //$search=$request;
+
+    //$data=App\User::where('email','like','%'.$search.'%');
+
     return view('users/postmaster/deletepm');
 });
 
-Route::get('/dash',function(){
-    return view('backend/layouts/dashboard');
-});
 
-Route::prefix('/admin')->namespace('Admin')->group(function(){
-    Route::get('dashboard','AdminController@dashboard');
-});
 
-Auth::routes();
+//Route::prefix('/admin')->namespace('Admin')->group(function(){
+  //  Route::get('dashboard','AdminController@dashboard');
+//});
 
-Route::get('/homenew', 'HomeController@index')->name('homenew');
+//Auth::routes();
+
+//Route::get('/homenew', 'HomeController@index')->name('homenew');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/addpostmaster','PostmasterController@store');
+
+Route::get('/searchpm','SearchController@searchuser');
+
+Route::get('/deletepm/{id}','PostmasterController@delete');
+
+Route::get('/editpm','SearchController@userdetails');
+
+
+Route::get('/updatepm/{id}','PostmasterController@updateview');
+
+Route::post('/updatepostmaster/{id}','PostmasterController@update');
+
+Route::get('/add_branch',function(){
+    return view('Branch/add_branch');
+});
+
+Route::get('/location',function(){
+    return view('location');
+});
+
+Route::post('/addpostoffice','BranchController@store');
+
+Route::get('/brdetails','BranchController@view');
+
+Route::get('/deletebr/{id}','BranchController@delete');
+
+Route::get('/d_req',function(){
+    return view('letter.deliveryrequest');
+});
+
+Route::post('/delreq','LetterController@store');
+
+Route::get('/printpreview','PrintController@print');
+

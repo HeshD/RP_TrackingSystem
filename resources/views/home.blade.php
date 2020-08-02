@@ -14,7 +14,7 @@
 <div class="title m-b-md">
         <center>
        <font color="red" size= 20> <B> Sri Lankan Postal Department </B></font><br>
-       <img src="img/logo.png"></img>
+       <img src="img/logo1.png"></img>
         </center>
     </div>
 

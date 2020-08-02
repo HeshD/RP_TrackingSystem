@@ -31,7 +31,7 @@
               <div class="inner">
                 <h3>150</h3>
 
-                <p>New Orders</p>
+                <p>New Delivery Requests</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -66,7 +66,7 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/editpm" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

@@ -5,7 +5,7 @@
                 <div class="row justify-content-center">
                 <div class="col-md-6">
                 <div class="card">
-                <div class="card-header"><h1>Add Post Master</h1></div>
+                <div class="card-header"><h1>Place Delivery Request</h1></div>
                 @if(session('status'))
                                 <div class="alert alert-success" role="alert">
                                 {{session('status')}} 
@@ -14,51 +14,51 @@
 
                 <div class="card-body">
 
-                    <form method="POST" action="/addpostmaster">
+                    <form method="POST" action="/delreq">
 
                     @csrf
-                    <!-- Text input-->
+                 
                     <div class="form-group">
-                    <label>Name</label>  
-                    <input id="name" name="name" type="text" placeholder="" class="form-control input-md">
+                    <label>Sender Name</label>  
+                    <input id="sname" name="sname" type="text" placeholder="" class="form-control input-md">
                     </div>
                     
                     <div class="form-group">
-                    <label>Phone</label>  
+                    <label>Sender Address</label>                     
+                        <textarea class="form-control" id="saddress" name="saddress"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                    <label>Reciever Name</label>  
+                    <input id="rname" name="rname" type="text" placeholder="" class="form-control input-md">
+                    </div>
+                    <div class="form-group">
+                    <label>Reciever Address</label>                     
+                        <textarea class="form-control" id="raddress" name="raddress"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                    <label>Reciever Phone</label>  
                     <input id="phone" name="phone" type="text" placeholder="" class="form-control input-md">
                     </div>
                  
-                    <!-- Select Basic -->
-                    <div class="form-group">
-                    <label>Branch</label>
+                    <label>Weight of the Package</label>
                     <div class="col-md-6">
-                        <select id="branch" name="branch" class="form-control">
-                        <option value="Mt.Lavinia">Mt.Lavinia</option>
-                        <option value="Dehiwala">Dehiwala</option>
-                        </select>
-                    </div>
-                    </div>
+                    <input id="weight" name="weight" type="text" placeholder="" class="form-control input-md">
 
-                    <!-- Textarea -->
-                    <div class="form-group">
-                    <label>Address</label>                     
-                        <textarea class="form-control" id="address" name="address"></textarea>
                     </div>
+                  
+
+                    
                     <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
                     </div>
 
-                    <!-- Password input-->
-                    <div class="form-group">
-                    <label>Password</label>
-                    
-                    <input id="password" name="password" type="password" placeholder="" class="form-control">
-                        
-                    </div>
+                   
                     
 
-                    <!-- Button -->
+                   
                     <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
                     <div class="col-md-4">

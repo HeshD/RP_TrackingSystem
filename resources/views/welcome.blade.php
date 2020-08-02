@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
         <!-- Styles -->
         <style>
@@ -39,6 +39,12 @@
             .top-right {
                 position: absolute;
                 right: 10px;
+                top: 18px;
+            }
+
+            .top-left {
+                position: absolute;
+                left: 10px;
                 top: 18px;
             }
 
@@ -80,14 +86,16 @@
                     @endauth
                 </div>
             @endif
+            
+	
 
             <div class="content">
                 <div class="title m-b-md">
                 <font color="red" > <B>  Welcome to SL Post</B></font>
                 </div>
                 <div class="container">
-                <img class="img-responsive" src="img/logo.png"></img> 
-                
+                <img class="img-responsive" src="img/logo1.png"></img> 
+                <BR> <BR>
                 <form>
                 Track Number  
                  <input type="text" class="form-control" id="track_no" name="track_no" placeholder="Input Track NO"> 

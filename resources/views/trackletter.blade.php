@@ -5,23 +5,28 @@
 <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-md-6 mx-auto">
 
           
            
               
           <font color= "red" size 30 ><B><h2>Courier Tracking</h2> <BR>  </font></B>
             <form>
-                Track Number  
-                 <input type="text" class="form-control" id="track_no" name="track_no" placeholder="Input Track NO"> 
+                Tracking Number  
+                 <input type="text" class="form-control" id="track_no" name="track_no" placeholder="Input Trackin No"> 
              </form>
              <BR>
-                 <BR><button type="search" class="btn btn-primary">Search</button>   
+                 <div class="container" >
+                 <div class="text-center">
+                 <button type="search" class="btn btn-primary">Search</button>
+                 <button type="cancel" class="btn btn-primary"> Back </button>
+                 </div>
+                 </div>   
+
+
                      
                 
-                     <a href="/track" class="nav-link">
-          <left >  <button type="cancel" class="btn btn-primary"> Back </button> </left ></a> 
-          <p class="lead" align="justify">
+                     
         </div>
       </div>
     </div>

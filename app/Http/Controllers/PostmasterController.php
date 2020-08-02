@@ -28,4 +28,39 @@ class PostmasterController extends Controller
 
 
     }
+
+    public function delete($id){
+        $postmaster=User::find($id);
+
+        $postmaster->delete();
+
+        return redirect()->back();
+    }
+
+    public function updateview($id){
+        $postmaster=User::find($id);
+
+        return view('users.postmaster.updatepm')->with('pmdata',$postmaster);
+    }
+
+    public function update(Request $request, $id){
+        
+        $name=$request->name;
+        $phone=$request->phone;
+        $branch=$request->branch;
+        $address=$request->address;
+        $email=$request->email;
+
+        $postmaster=User::find($id);
+        $postmaster->name=$name;
+        $postmaster->phone=$phone;
+        $postmaster->branch=$branch;
+        $postmaster->address=$address;
+        $postmaster->email=$email;
+        $postmaster->save();
+
+        return redirect('deletepm')->with('status','Post Master Successfully updated.');
+
+
+    }
 }
