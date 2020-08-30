@@ -22,8 +22,10 @@
        <div class="col-md-6">
        <label for=""><strong>Weight : </strong></label> 
         &nbsp; &nbsp;<label for="weight">{{ $letter->weight }}g</label></div>
-
-
+        <div class="col-md-6">
+        <?php echo DNS1D::getBarcodeHTML('4445645656', 'C39'); ?> <br>
+        
+        </div>
      
     </div>
     </div>

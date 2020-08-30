@@ -8,7 +8,7 @@
 @section('content')
     <div class="content-wrapper">
     <div class="container">
-        <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-6">
 
             <div class="card">
@@ -57,6 +57,12 @@
                         <option value="Class 2">Class 2 Office</option>
                         <option value="Sub">Sub Post Office</option>
                         </select>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <div class="col-md-8">
+                    <label>Branch Code</label>  
+                    <input id="branch_code" name="branch_code" type="text" placeholder="" class="form-control input-md">
                     </div>
                     </div>
 

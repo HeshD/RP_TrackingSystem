@@ -47,6 +47,20 @@
                     <input id="weight" name="weight" type="text" placeholder="" class="form-control input-md">
 
                     </div>
+
+                    <div class="form-group">
+                    <label>Branch type</label>
+                    <div class="col-md-6">
+
+                        <select id="branch_name" name="branch_name" class="form-control">
+                        <option>Select Post Office</option>
+                        @foreach(App\Branch::all() as $data)
+                        <option value="{{$data->id}}">{{$data->name}}</option>
+
+                        @endforeach
+                        </select>
+                    </div>
+                    </div>
                   
 
                     

@@ -15,6 +15,8 @@ class BranchController extends Controller
         $branch->province=$request->province;
         $branch->district=$request->district;
         $branch->branch_type=$request->branch_type;
+        $branch->branch_code=$request->branch_code;
+
 
         $branch->save();
 

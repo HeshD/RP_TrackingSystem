@@ -20,6 +20,7 @@ class CreateBranchesTable extends Migration
             $table->string('district');
             $table->string('province');
             $table->string('branch_type');
+            $table->string('branch_code');
             $table->integer('longtiude')->nullable();
             $table->integer('latiude')->nullable();
             $table->timestamps();
