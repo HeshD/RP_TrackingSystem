@@ -1,4 +1,5 @@
 @extends('backend.layouts.main')
+
 @section('content')
 
                 <div class="container">
@@ -42,15 +43,11 @@
                     <input id="phone" name="phone" type="text" placeholder="" class="form-control input-md">
                     </div>
                  
-                    <label>Weight of the Package</label>
-                    <div class="col-md-6">
-                    <input id="weight" name="weight" type="text" placeholder="" class="form-control input-md">
-
-                    </div>
-
+               
                     <div class="form-group">
-                    <label>Branch type</label>
+                    <div class="row">
                     <div class="col-md-6">
+                    <label>Origin Office</label>
 
                         <select id="branch_name" name="branch_name" class="form-control">
                         <option>Select Post Office</option>
@@ -60,8 +57,35 @@
                         @endforeach
                         </select>
                     </div>
+
+                    <div class="col-md-6">
+                    <label>Package type</label>
+
+                        <select id="package_type" name="package_type" class="form-control">
+                        <option value="">Select Package Type</option>
+                             <option value="Letter">Letter</option>
+                             <option value="Parcel">Parcel</option>
+                             <option value="Speed Post">Speed Post</option></select>
+
+                    </div>
+                    </div>
+                    </div>
+
+                    <label>Weight of the Package</label>
+                    <div class="col-md-6">
+                    <input id="weight" name="weight" type="text" placeholder="" class="input form-control input-md">
+
                     </div>
                   
+                    <label>Postage Fee: <label id=""></label></label>
+                    <div class="row">&nbsp;&nbsp;&nbsp;&nbsp;<label>Rs :</label>
+                    <div class="col-md-6">
+                        <input id="postage" name="weight" type="text" placeholder="" class="form-control input-md" readonly>
+
+                    </div>
+                    </div>
+                  
+                    <script type="text/javascript" src="{{asset('/js/postcal.js')}}"></script>
 
                     
                     <div class="form-group">
@@ -79,7 +103,7 @@
                         <button type="submit" class="btn btn-primary">Save</button>
                            
 
-                        <button id="cancel" name="cancelbutton" class="btn btn-danger">cancel</button>
+                        <button id="cancel" button type="reset" name="cancelbutton" class="btn btn-danger">Clear</button>
                     </div>
                     </div>
                 </div>

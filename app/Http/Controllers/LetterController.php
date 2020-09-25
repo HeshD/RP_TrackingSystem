@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\letter;
+use App\branch;
 use Illuminate\Http\Request;
 
 class LetterController extends Controller
@@ -35,11 +36,28 @@ class LetterController extends Controller
      */
     public function store(Request $request)
     {
+        $branch=branch::where('id',$request->branch_name)->first();
+        $ltr=letter::where('orgin_ofc',$request->branch_name)->get();
+        $nubRow=count($ltr);
+
+        if(date('l',strtotime(date('Y-01-01')))){
+            $barcode=$branch->branch_code. str_pad($nubRow, 5,'0', STR_PAD_LEFT) .date('Y');
+        }
+        else{
+            $barcode=$nubRow[0].$nubRow[1]+1;
+        }
+        $barcode=$branch->branch_code. str_pad($nubRow, 5,'0', STR_PAD_LEFT) .date('Y');
+        
+     
         $letter = new letter;
         $letter->sname=$request->sname;
         $letter->saddress=$request->saddress;        
         $letter->rname=$request->rname;
         $letter->raddress=$request->raddress;
+        $letter->barcode=$barcode;
+
+        $letter->orgin_ofc=$request->branch_name;
+
         $letter->weight=$request->weight;
         
 
