@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\letter;
 use App\branch;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Email;
+
 
 class LetterController extends Controller
 {
@@ -54,15 +57,20 @@ class LetterController extends Controller
         $letter->saddress=$request->saddress;        
         $letter->rname=$request->rname;
         $letter->raddress=$request->raddress;
+        $letter->Payment=$request->postage;
+
         $letter->barcode=$barcode;
 
         $letter->orgin_ofc=$request->branch_name;
 
         $letter->weight=$request->weight;
         
+        $letter->email=$request->email;
 
 
         $letter->save();
+
+        Mail::to($letter->email)->send(new Email($barcode));
 
         return view('printrecipt')->with('letter',$letter);
     }
